@@ -1,0 +1,14 @@
+.explore{
+    margin-top: 5px;
+    border: 1px solid;
+    background-color: #CE1126;
+    border-radius: 5px;
+    padding: 10px 25px 10px 25px;
+    color: rgb(211, 205, 205);
+}
+.container{
+    margin-bottom: 30px;
+}
+.head img{
+    width: 100%;
+}
