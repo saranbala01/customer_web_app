@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "PpCgBXSivUKdedI71pETvFzjfkU+OJ56Co2iTgZ0AYI=",
+  "Source": "customer_web_app",
+  "BasePath": "_content/customer_web_app",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

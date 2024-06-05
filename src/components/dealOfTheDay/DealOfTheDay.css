@@ -1,0 +1,21 @@
+.card h6{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.card-details{
+    bottom: 0%;
+}
+.deal{
+    height: fit-content;
+}
+.card-button{
+    bottom: 0;
+    border: 1px;
+    color: white;
+    background-color: #80b435 !important;
+    font-size: small;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

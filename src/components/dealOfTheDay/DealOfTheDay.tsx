@@ -1,32 +1,42 @@
 import * as React from "react";
+import './DealOfTheDay.css';
 
-const card = [
-    {
-      id: 1,
-      head: "Premium Antibiotic-residue-free Boneless Chicken Breast Fillest",
-      bodyh: "From Joseph Farm",
-      foot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, optio repellat aperiam saepe obcaecati vitae dolorem quam, rerum aspernatur modi quae quidem nisi! Odit, est. Veritatis fugiat odit laborum nam.", 
-    },
-    {
-      id: 2,
-      head: "Fresh Beans",
-      body: "From Martha's Fresh Farm",
-      foot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, optio repellat aperiam saepe obcaecati vitae dolorem quam, rerum aspernatur modi quae quidem nisi! Odit, est. Veritatis fugiat odit laborum nam.",
-    },
-    {
-      id: 3,
-      head: "Premium,delicious and rich with calcium Cow Milk(Organic)",
-      body: "From George Farm",
-      foot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, optio repellat aperiam saepe obcaecati vitae dolorem quam, rerum aspernatur modi quae quidem nisi! Odit, est. Veritatis fugiat odit laborum nam.",
-    },
-  ];
-
+interface card{
+  id:number,
+  title:string,
+  subTitle:string,
+  description:string,
+  weight:string,
+  originalPrice:string,
+  discountPrice:string
+}
+ 
 const DealOfTheDay:React.FC=()=>{
+ const [card , setCard] = React.useState<card[]>([]);
+
+  React.useEffect(()=>{
+    fetch('https://localhost:44311/api/CustomerWeb/GetValue')
+    .then((response)=>response.json())
+    .then((json)=>setCard(json))
+  },[])
+console.log(card);
     return(
-    <div className="container text-center">
+    <div className="container">
+      <div className="text-center">
         Deal of the Day
-        <div className="card col-12 border-1">
-            <div className="col-3"></div>
+        </div>
+        <div className="container position-relative d-flex col-12 border-1">
+          {card.map((product)=>(
+                        <div className="card deal col-3" key={product.id}>
+                          <div className="card-details p-2">
+                          <h6 style={{fontSize:13,fontWeight:'bold'}}>{product.title}</h6>
+                          <h6 style={{fontSize:13}}>{product.subTitle}</h6>
+                          <h6 style={{fontWeight:'normal',fontSize:12}}>{product.description}</h6>
+                          <p className="m-0">{product.weight}</p>
+                          </div>
+                          <button className="card-button col-12" title="add to cart" type="submit">Add to Cart</button>
+                        </div>
+          ))}
             
         </div>
     </div>

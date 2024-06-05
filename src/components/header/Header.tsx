@@ -1,5 +1,4 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable jsx-a11y/anchor-is-valid */
+
 import logo from "../../assets/logo.png";
 import person from "../../assets/person.svg";
 import notification from "../../assets/notification.png";
@@ -14,7 +13,7 @@ import "./Header.css";
 const Header: React.FC = () => {
   return (
     <>
-      <div className="col-12 mt-3 header d-flex justify-content-between align-items-center  ">
+      <div className="col-12 header d-flex justify-content-between align-items-center  ">
         <div className="col-5 d-flex justify-content-around align-items-center ">
           <img src={logo} alt="Fresh & Local" />
           <div>
@@ -59,7 +58,6 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-      <hr></hr>
     </>
   );
 }

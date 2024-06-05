@@ -1,27 +1,21 @@
 import "./FeaturedPromos.css";
 import * as React from "react";
 
+interface Promo{
+  id:number,
+  head: string,
+  body: string,
+  foot:string
+}
+
 function FeaturedPromos() {
-  const cardDetails = [
-    {
-      id: 1,
-      head: "Freshly Harvested",
-      body: "Organic Vegetables",
-      foot: "at your doorstep",
-    },
-    {
-      id: 2,
-      head: "Make your Day",
-      body: "Fruitilicious",
-      foot: "Fresh and exotic fruits from Al Fasilya Farms",
-    },
-    {
-      id: 3,
-      head: "Enriched with natural",
-      body: "Sweetness!",
-      foot: "Premium quality dates from Abdaly Farms",
-    },
-  ];
+const [cardDetails,setCardDetails] = React.useState<Promo[]>([]);
+
+React.useEffect(()=>{
+  fetch('https://localhost:44311/api/CustomerWeb/GetPromos')
+  .then((response)=>response.json())
+  .then((json)=>setCardDetails(json))
+},[])
 
   return (
     <>
