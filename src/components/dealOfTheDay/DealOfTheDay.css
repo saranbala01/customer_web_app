@@ -1,14 +1,30 @@
+.dealOfTheDay{
+    background-color: #f7f7f7;
+}
+.deals {
+    padding: 20px;
+    margin-top: 40px;
+}
+.deals-card{
+    width:85%;
+}
+.heading{
+    color: #415162;
+    font: normal normal 800 30px/41px Sans-serif;
+    padding-bottom: 20px;
+}
 .card h6{
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    color: #69696b;
 }
 .card-details{
     bottom: 0%;
 }
 .deal{
-    height: fit-content;
+    justify-content: end;
 }
 .card-button{
     bottom: 0;
@@ -18,4 +34,18 @@
     font-size: small;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+.weight,.original-price,.discount-price{
+    font-size: x-small;
+}
+.weight-price-container{
+    display: flex;
+    font-weight: bold;
+    color: #69696b;
+}
+.weight-price-container p{
+    padding-left: 6px;
+}
+.original-price{
+    text-decoration: line-through;
 }

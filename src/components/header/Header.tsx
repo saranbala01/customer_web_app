@@ -7,7 +7,6 @@ import location from "../../assets/location.png";
 import search from "../../assets/search.png";
 import downArrow from "../../assets/down-arrow.svg";
 import * as React from "react";
-
 import "./Header.css";
 
 const Header: React.FC = () => {

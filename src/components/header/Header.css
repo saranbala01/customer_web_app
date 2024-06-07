@@ -6,7 +6,8 @@ a{
 .header{
     padding-top: 10px;
     padding-bottom: 10px;
-    position: fixed;
+    position: sticky;
+    box-shadow: 1px 0px 5px;
     top: 0%;
     background-color: white;
     z-index: 100;

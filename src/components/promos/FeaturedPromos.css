@@ -31,4 +31,8 @@ h3,h5,h6{
     border-radius: 5px;
     padding: 10px 25px 10px 25px;
     color: rgb(211, 205, 205);
+    font-size: medium;
+}
+.head img{
+    width: 100%;
 }
